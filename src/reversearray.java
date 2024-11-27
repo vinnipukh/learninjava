@@ -1,3 +1,4 @@
+// as it can be understood from to class name, i was tasked with reversing an array of integers at the problem link:(https://www.w3resource.com/java-exercises/array/java-array-exercise-11.php)
 import java.util.Arrays;
 
 public class reversearray {

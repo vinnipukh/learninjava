@@ -1,3 +1,8 @@
+/* at cs 101 lab week 10 i was tasked with
+Write a static method that takes an int array as an argument,
+and returns the second largest element as an int. The array itself
+must remain unmodified, and use of Arrays.sort() is not allowed.
+ */
 public class secondlargestelement {
     public static void main(String[] args) {
         int[] x = {6, 8, 9, 2, -1, 12, 5, 17, 3, 1, 7, 11};

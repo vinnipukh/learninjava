@@ -1,3 +1,11 @@
+/* at cs 101 lab week 10 i was tasked with: write a static method that takes an int array as an argument,
+and reports whether its elements can form a set, or not. This es-
+sentially reports whether or not whether the array contains dupli-
+cate elements. If the array does not contain duplicate elements, the
+method should return true, indicating that it is a set. If the array
+does contain duplicate elements, the method should return false,
+indicating that is not a set.
+ */
 import java.util.Arrays;
 
 public class setornot {
