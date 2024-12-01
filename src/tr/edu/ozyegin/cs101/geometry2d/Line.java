@@ -42,6 +42,10 @@ public class Line {
      */
     public Line(Point p, Point q) {
 // TO BE IMPLEMENTED
+        this.a = q.getY()-p.getY();
+        this.b = q.getX()-p.getX();
+        this.c = p.getX() * q.getY() - q.getX() * p.getY();
+
     }
 
     /**
@@ -97,8 +101,7 @@ public class Line {
      * @return true if p lies on this line
      */
     public boolean goesThrough(Point p) {
-// TO BE IMPLEMENTED
-        return false;
+        return a * p.getX() + b * p.getY() + c == 0;
     }
 
     /**
@@ -113,6 +116,12 @@ public class Line {
      */
     public Point intersection(Line other) {
 // TO BE IMPLEMENTED
-        return null;
+        if(){
+
+
+        }
+        else{
+            return null;
+        }
     }
 }
