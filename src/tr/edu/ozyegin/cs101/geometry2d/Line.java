@@ -101,6 +101,7 @@ public class Line {
      * @return true if p lies on this line
      */
     public boolean goesThrough(Point p) {
+        // implemented
         return a * p.getX() + b * p.getY() + c == 0;
     }
 
@@ -116,12 +117,12 @@ public class Line {
      */
     public Point intersection(Line other) {
 // TO BE IMPLEMENTED
-        if(){
-
-
-        }
-        else{
+        if(this.getM() == other.getM()){
             return null;
         }
+        double intersectionx = (this.getN()-other.getN())/(this.getM()-other.getM()) ;
+        double intersectiony =  this.getM()*(this.getN()-other.getN())/(this.getM()-this.getN())+this.getN();
+        return new Point(intersectionx,intersectiony);
+
     }
 }
