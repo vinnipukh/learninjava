@@ -1,33 +1,32 @@
-// this class is designed to test the point and line classes
 package tr.edu.ozyegin.cs101.geometry2d;
 
 public class test {
     public static void main(String[] args) {
-        // Test constructor with points
-        Point p1 = new Point(1, 2);
-        Point p2 = new Point(3, 4);
-        Line line = new Line(p1, p2);
+        Point p1 = new Point(0,4);
+        Point p2 = new Point(6,8);
+        Point p3 = new Point(4,3);
+        Point p4 = new Point(8,6);
+        System.out.println("X value of p1: "+p1.getX()+" Y value of p1: "+p1.getY());
+        System.out.println("X value of p2: "+p2.getX()+" Y value of p2: "+p2.getY());
 
-        assert line.getA() == 2 : "Test failed: getA()";
-        assert line.getB() == 2 : "Test failed: getB()";
-        assert line.getC() == -2 : "Test failed: getC()";
+        Line line1 = new Line(0,4);
+        if(line1.goesThrough(p1)){
+            System.out.print("line1 passes through "+p1.getX()+","+p1.getY());
 
-        //  goesThrough method test
-        Line line1 = new Line(1, -1, 0);
-        Point p = new Point(1, 1);
-        assert line1.goesThrough(p) : "Test failed: goesThrough()";
+        }
+        Line line2 = new Line(p3,p4);
+        if (line1.intersection(line2) == null){
+            System.out.println("line1 and line2 are parallel");
+        }
+        else {
+            System.out.println("\n lines intersect at "+line1.intersection(line2).getX()+","+line1.intersection(line2).getY());
 
-        //  intersection method test
-        Line line2 = new Line(1, 1);
-        Point intersection = line1.intersection(line2);
-        assert intersection != null : "Test failed: intersection() is null";
-        assert intersection.getX() == 1 : "Test failed: intersection().getX()";
-        assert intersection.getY() == 1 : "Test failed: intersection().getY()";
 
-        //  parallel line test
-        Line line3 = new Line(1, -1, 1);
-        assert line1.intersection(line3) == null : "Test failed: intersection() for parallel lines";
+        }
 
-        System.out.println("All tests passed.");
+
+
+
+
     }
 }

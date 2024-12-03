@@ -44,7 +44,8 @@ public class Line {
 // TO BE IMPLEMENTED
         this.a = q.getY()-p.getY();
         this.b = q.getX()-p.getX();
-        this.c = p.getX() * q.getY() - q.getX() * p.getY();
+        this.c = q.getY()*p.getX()-q.getX()*p.getY() ;
+
 
     }
 
@@ -101,7 +102,7 @@ public class Line {
      * @return true if p lies on this line
      */
     public boolean goesThrough(Point p) {
-        // implemented
+// TO BE IMPLEMENTED
         return a * p.getX() + b * p.getY() + c == 0;
     }
 
@@ -120,9 +121,9 @@ public class Line {
         if(this.getM() == other.getM()){
             return null;
         }
-        double intersectionx = (this.getN()-other.getN())/(this.getM()-other.getM()) ;
-        double intersectiony =  this.getM()*(this.getN()-other.getN())/(this.getM()-this.getN())+this.getN();
-        return new Point(intersectionx,intersectiony);
+        double intersectionX = (this.getN()-other.getN())/(this.getM()-other.getM()) ;
+        double intersectionY =  this.getM()*(this.getN()-other.getN())/(this.getM()-this.getN())+this.getN();
+        return new Point(intersectionX,intersectionY);
 
     }
 }
