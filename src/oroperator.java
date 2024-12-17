@@ -4,14 +4,21 @@ public class oroperator {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("You are playing a game! Press q or Q to quit!");
-        String response = scanner.next();
 
-        if(response.equals("q")|| response.equals("Q")){
-            System.out.println("Quitting game,bye.");
+        while(true){
+
+            String response = scanner.next();
+            if(response.equals("q")|| response.equals("Q")){
+                System.out.println("Quitting game,bye.");
+                 break;
+            }
+            else{
+                System.out.println("You still are playing ze game *insert german murmuring*,you know ze rules, press q or Q to quit ze game");
+            }
+
         }
-        else{
-            System.out.println("You are still playing ze game *insert german murmuring*");
-        }
+
+
 
     }
 }
