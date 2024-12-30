@@ -9,8 +9,8 @@ public class arrays {
         cars[1] = "Corvette";
         cars[2] = "Tesla";
 
-        for (String car : cars) {
-            System.out.println(car);
+        for (String c : cars) {
+            System.out.println(c);
 
         }
 
